@@ -14,17 +14,7 @@
     <x-input label="Username" name="username" :object="$user" />
     <x-input label="Fullname" name="fullname" type="fullname" :object="$user" />
     <x-input label="Biodata" name="bio" type="bio" :object="$user" />
-    <div class="row mb-3">
-        <label for="avatar" class="col-md-4 col-form-label text-md-end">Avatar</label>
-        <div class="col-md-6">
-            <input type="file" name="avatar" id="avatar">
-        </div>
-        @if ($errors->has('avatar'))
-            <span class="invalid-feedback" role="alert">
-                {{ $errors->first('avatar') }}
-            </span>
-        @endif
-    </div>
+   <x-fileupload name="avatar"/>
 
 
     <x-submittbtn text="Update Profile" />

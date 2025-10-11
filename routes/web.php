@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PostController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -14,5 +15,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('user/edit', [UserController::class, 'edit']);
 Route::put('user/edit', [UserController::class, 'update']);
 
-// Route::get('user/{id}/edit', [UserController::class, 'edit'])->name('user.edit');
-// Route::put('user/{id}', [UserController::class, 'update'])->name('user.update');
+Route::resource('post', PostController::class);

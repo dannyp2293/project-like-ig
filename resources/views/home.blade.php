@@ -5,20 +5,21 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+    <div class="card-header">{{ __('Dashboard') }}</div>
 
-                <div class="card-body">
-                   <x-avatar :user="$user"/>
+    <div class="card-body">
+        <x-avatar :user="$user"/>
 
-                    <h2>User : {{Auth::user()->username}} - {{Auth::user()->fullname}}</h2>
-                    <p>{{Auth::user()->bio }}</p>
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+        <h2>User : {{Auth::user()->username}} - {{Auth::user()->fullname}}</h2>
+        <p>{{Auth::user()->bio }}</p>
+        @if (session('status'))
+            <div class="alert alert-success" role="alert">
+                {{ session('status') }}
+            </div>
+        @endif
+        <a href="/post/create" >Upload </a >
 
-                    {{ __('You are logged in!') }}
+        {{ __('You are logged in!') }}
                 </div>
             </div>
         </div>

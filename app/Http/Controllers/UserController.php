@@ -40,34 +40,4 @@ public function update (Request $request)
     return redirect('/home');
 
 }
-// }
-// public function update(Request $request)
-// {
-//     $user = Auth::user();
-
-//     $request->validate([
-//         'username' => 'required|alpha_dash|min:3|max:15|unique:users,username,' . $user->id,
-//         'fullname' => 'max:30',
-//         'bio'      => 'max:144',
-//         'avatar'   => 'image|mimes:jpeg,jpg,png,gif|max:2048'
-//     ]);
-
-    // default avatar lama
-//     $imageName = $user->avatar;
-
-//     if ($request->hasFile('avatar')) {
-//         $avatar_img = $request->file('avatar');
-//         $imageName  = $user->username . '-' . time() . '.' . $avatar_img->getClientOriginalExtension();
-//         $avatar_img->move(public_path('images/avatar'), $imageName);
-//     }
-
-//     $user->update([
-//         'username' => $request->username,
-//         'fullname' => $request->fullname,
-//         'bio'      => $request->bio,
-//         'avatar'   => $imageName
-//     ]);
-
-//     return redirect('/home')->with('success', 'Profile updated!');
-// }
 }
